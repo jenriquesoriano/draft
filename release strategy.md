@@ -15,7 +15,7 @@ It must be kept in mind that the main spirit of this organization is to facilita
 
 # Types of developments to be considered
 
-En este sentido, los desarrollos a incorporar se han clasificado de la siguiente forma:
+Thus, developments to be incorporated in a release have been classified attending to its impact on the production deployment as:
 
 * Breaking changes:
   * Corresponding to an implementation that makes the compliance more restrictive and difficult to pass
