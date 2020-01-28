@@ -1,5 +1,3 @@
-# Deployments
-
 There will be different instances of the ETF deploying different branches of the ATS/ETS/ETF set, with different purposes
 
 * Production instance: stable deployment with official and proven ATS/ETS for the current year's report
@@ -25,6 +23,4 @@ En este sentido, los desarrollos a incorporar se han clasificado de la siguiente
 * Non-Breaking changes:
   * Implementation reducing restriction for the correct compliance in a requirement
   * Minor changes to the interface that add new functionalities to the interface but it has no effect on the tests
-* HOTFix: detected bug that needs to be implemented and extended as soon as possible to the different instances
-
-Thus, combining these approaches, a strategy has been made in which the management of these elements in the GitHub environment is exposed with its corresponding versions, branches, deployments and mutual interactions, according to the following diagram:
+* Hotfix: detected bug that needs to be implemented and extended as soon as possible to the different instances
