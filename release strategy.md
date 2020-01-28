@@ -1,9 +1,12 @@
 ##### Table of Contents  
 [Headers](#headers)  
-[Emphasis](#emphasis)  
+[Introduction](#Introduction)  
+[First approach](#First approach)  
 ...snip...    
 <a name="headers"/>
-## Headers
+<a name="Introduction"/>
+
+# Headers
 
 # Introduction
 
