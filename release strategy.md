@@ -12,7 +12,7 @@ When reviewing the current situation, a few aspects come to mind that would help
 * Establish data-driven testing 
 * Communicate changes and their impact to the community
 
-# Release Strategy
+# Release Planning
 At the core of the release planning strategy is the annual major release. This is the release that encompasses the rules that will be applied in the end-of-year reporting. To give tool developers and INSPIRE implementers sufficient time to adjust, this release will be made with significant lead time to the monitoring period.
 
 ## ETF Environments
@@ -21,8 +21,11 @@ There will be different instances of the ETF deploying different branches of the
 * Staging instance: which will contain a pre-publication version of the production
 * Beta instance: this environment will contain a version corresponding to the following year's application, so users can choose to validate against the current year's version or the following year's version
 
+## Versioning scheme
+For the actual versioning scheme, it is proposed to use a variant of semantic versioning. Since INSPIRE monitoring is on an annual cycle, the year is used as the major version. Minor versions may add relevant changes, while patches may only add fixes that are more lenient.
+
 ## Date intervals
-It must be kept in mind that the main spirit of this organization is to facilitate reporting to member states, so depending on the time of year, different approaches will be considered for the existing functionalities to be incorporated to the Production instancein each of the environments, in accordance with the above.
+It must be kept in mind that the main spirit of this release strategy is to facilitate the reporting to member states, so depending on the time of year, different approaches will be considered for the existing functionalities to be incorporated to the different environments, in accordance with the above.
 * [15/01-15/03] Developing new requirements and development of the yearly monitoring tool
 * [15/03-15/06] Developing new requirements and development of the yearly monitoring tool
 * [15/06-15/09] Incorporating flexibility and lesser stricness in the compliance, if justified
