@@ -42,6 +42,96 @@ This version will be used for the evaluation of the annual report.
 * **v2021.0 - 15/01/2021.** After the conclusion of the reporting cycle, a first version of the TSAs/STEs and the ETF to be used in the 2021 reporting cycle will be published in the production environment.
 From this version onwards, the same release philosophy will be followed, so that the community has a clear understanding of what is to be released, the functionalities offered and the scope of these developments.
 
+These announced versions must be orchestrated not only in terms of infrastructure and deployment environments, but also in terms of managing the various branches in the community repository.
+Thus, in order to clarify the operation between the different branches and the deployment environments where the ATS/ETS will be able to run, the diagrams below are included:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
