@@ -48,9 +48,11 @@ Thus, in order to clarify the operation between the different branches and the d
 
 ![v2020.1](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.1_202001291530.png "v2020.1")
 
-![v2020.1]: (/img/ETF INSPIRE Validator-Release management diagrams-2020.1_202001291530.png "v2020.1")
+![v2020.2](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.2_202001291530.png "v2020.2")
 
+![v2020.3](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.3_202001291530.png "v2020.3")
 
+![v2021.0](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2021.0_202001291530.png "v2021.1")
 
 
 
