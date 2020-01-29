@@ -45,6 +45,13 @@ From this version onwards, the same release philosophy will be followed, so that
 These announced versions must be orchestrated not only in terms of infrastructure and deployment environments, but also in terms of managing the various branches in the community repository.
 Thus, in order to clarify the operation between the different branches and the deployment environments where the ATS/ETS will be able to run, the diagrams below are included:
 
+## v2020.1 - 15/03/2020
+This first version v2020.1 to be deployed in the production instance on 03/15/2020 includes breaking-changes, i.e. new requirements and developments that directly impact the report to be made. 
+As you can see, it is based on the current release v1.0.8, which is deployed in production environment.
+All issues that come in the period prior to the release, whether they are breaking changes, non-breaking changes or HotFixes will be deployed as soon as they have been developed in the staging environment, as usual. 
+If a production deployment is needed before the HotFix date, the corresponding branch v1.0.8.1 will be created and the production deployment will follow.
+Finally, according to the planned date, the validated developments will be taken from the staging branch, creating the branch v2020.1 that will be deployed merge in the master branch and deployed in the production environment. 
+This way, the reference version from this release becomes v2020.1
 
 ![v2020.1](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.1_202001291530.png "v2020.1")
 
@@ -131,21 +138,6 @@ Thus, in order to clarify the operation between the different branches and the d
 
 
 
-
-
-
-
-
-
-
-
-
-
-on el objetivo de hacer los datosconcebir la siguiente planificación de los siguientes periodos a lo largo del año en relación a las funcionalidades de ATS/ETS y ETF en la instancia de producción:
-* [15/01-15/06] Development of new requirements and development of the yearly monitoring tool y producción de la herramienta de reporte al final del periodo.
-* [15/06-15/09] Incorporating flexibility and lesser stricness in the compliance. Durante este periodo, sólo se incorporarán desarrollos que faciliten el reporte y que se verán en 
-* [15/09-15/01] Providing stability in the yearly reporting environment (bugfixing, performance, etc...) Only hotfixes would be included.
-Adicionalmente, se trabajará desde la mitad del año en curso en la producción de la versión 
 
 
 
