@@ -46,7 +46,7 @@ These announced versions must be orchestrated not only in terms of infrastructur
 Thus, in order to clarify the operation between the different branches and the deployment environments where the ATS/ETS will be able to run, the diagrams below are included:
 
 
-
+[v2020.1]: https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.1_202001291530.png "v2020.1"
 
 
 
