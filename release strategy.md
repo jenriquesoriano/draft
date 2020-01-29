@@ -15,25 +15,14 @@ When reviewing the current situation, a few aspects come to mind that would help
 # Release Planning
 At the core of the release planning strategy is the annual major release. This is the release that encompasses the rules that will be applied in the end-of-year reporting. To give tool developers and INSPIRE implementers sufficient time to adjust, this release will be made with significant lead time to the monitoring period.
 
-## ETF Environments
+In order to provide users with an environment where developments can be adequately tested, different test environments are offered, where the ATS/ETS developed will be tested on a specific instance of the ETF.
 There will be different instances of the ETF deploying different branches of the ATS/ETS/ETF set, with different purposes
 * Production instance: stable deployment with official and proven ATS/ETS for the current year's report
 * Staging instance: which will contain a pre-publication version of the production
 * Beta instance: this environment will contain a version corresponding to the following year's application, so users can choose to validate against the current year's version or the following year's version
 
-## Versioning scheme
-For the actual versioning scheme, it is proposed to use a variant of semantic versioning. Since INSPIRE monitoring is on an annual cycle, the year is used as the major version. Minor versions may add relevant changes, while patches may only add fixes that are more lenient.
-
-## Date intervals
-It must be kept in mind that the main spirit of this release strategy is to facilitate the reporting to member states, so depending on the time of year, different approaches will be considered for the existing functionalities to be incorporated to the different environments, in accordance with the above.
-* [15/01-15/03] Developing new requirements and development of the yearly monitoring tool
-* [15/03-15/06] Developing new requirements and development of the yearly monitoring tool
-* [15/06-15/09] Incorporating flexibility and lesser stricness in the compliance, if justified
-* [15/09-15/01] Providing stability in the yearly reporting environment (bugfixing, performance, etc...) No breaking changes or issues are supossed to be included.
-
-## Types of developments to be considered
-Thus, developments to be incorporated in a release have been classified attending to its impact on the production deployment as:
-
+The different versions incorporated into these environments may contain different developments, both at the ATS/ETS and ETF levels.
+The following types of functionalities to be incorporated are established according to the relevance of the changes introduced in each development, as well as to the impact it has on the validations to be carried out
 * Breaking changes:
   * Corresponding to an implementation that makes the compliance more restrictive and difficult to pass
   * New tests
@@ -41,3 +30,39 @@ Thus, developments to be incorporated in a release have been classified attendin
   * Implementation reducing restriction for the correct compliance in a requirement
   * Minor changes to the interface that add new functionalities to the interface but it has no effect on the tests
 * Hotfix: detected bug that needs to be implemented and extended as soon as possible to the different instances
+
+In order to facilitate reporting at the end of the year, a fundamental aspect is that the community is adequately informed of the versions to be released, as well as being given enough time to accommodate the data to be reported on a stable, unvarying and reliable version.
+Globally, a work schedule is established for the annual report in which the focus is mainly on concentrating the breaking-changes in the first half of the year, so that by June of each year, there is a stable version on which to test the data and where the changes introduced up to the end of the year do not impact more restrictively on the validations to be made on the reporting information.
+Thus, the following schedule of versions can be conceived in accordance with the objective of offering the version used in the annual report at mid-year that can be used from that moment for the preparation of data aligned with the requirements to be met at the end of the year.
+* **v2020.1 - 15/03/2020.** It includes a first batch of binding developments to the end-2020 report, as well as improvements to the ETF tool.
+* **v2020.2 - 15/06/2020.** This version includes all the requirements and restrictions to incorporate the annual report, so that users can use it from now on to adapt their data appropriately until the end of the year
+* **v2020.3 - 15/09/2020.** The version published at this time contains all the restrictions and possible non-breaking changes or HotFixes, that is to say developments that do not imply additional work for the report but that can lower the degree of restriction of the requirements or correct existing bugs.
+This version will be used for the evaluation of the annual report.
+* **v2021.b - 15/09/2020.** In addition, a version will be published that incorporates the changes to be evaluated in the following year's report, so that those community members who want to test them will have it at their disposal.
+* **v2021.0 - 15/01/2021.** After the conclusion of the reporting cycle, a first version of the TSAs/STEs and the ETF to be used in the 2021 reporting cycle will be published in the production environment.
+From this version onwards, the same release philosophy will be followed, so that the community has a clear understanding of what is to be released, the functionalities offered and the scope of these developments.
+
+
+
+
+
+
+
+
+on el objetivo de hacer los datosconcebir la siguiente planificación de los siguientes periodos a lo largo del año en relación a las funcionalidades de ATS/ETS y ETF en la instancia de producción:
+* [15/01-15/06] Development of new requirements and development of the yearly monitoring tool y producción de la herramienta de reporte al final del periodo.
+* [15/06-15/09] Incorporating flexibility and lesser stricness in the compliance. Durante este periodo, sólo se incorporarán desarrollos que faciliten el reporte y que se verán en 
+* [15/09-15/01] Providing stability in the yearly reporting environment (bugfixing, performance, etc...) Only hotfixes would be included.
+Adicionalmente, se trabajará desde la mitad del año en curso en la producción de la versión 
+
+
+
+
+
+
+
+
+
+
+
+
