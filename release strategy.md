@@ -94,6 +94,17 @@ TEST7
 ![TEST7] (/draft/img/v2021.3.png)
 
 
+TEST7
+![TEST7] (jenriquesoriano/draft/release-strategy/img/v2021.3.png)
+
+
+TEST7
+![TEST7] (/jenriquesoriano/draft/release-strategy/img/v2021.3.png)
+
+
+![TEST10] (https://github.com/jenriquesoriano/draft/blob/release-strategy/img/v2021.3.png)
+
+
 
 
 
