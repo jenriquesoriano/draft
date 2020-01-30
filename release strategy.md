@@ -65,6 +65,31 @@ This way, the reference version from this release becomes v2020.1
 
 
 
+#TESTS
+
+TEST1
+![TEST1] (/img/v2021.3.png)
+
+
+TEST2
+![TEST2] (./img/v2021.3.png)
+
+
+TEST3
+![TEST3] (img/v2021.3.png)
+
+
+TEST4
+![TEST4] (img/v2021.3.png)
+
+
+TEST5
+[[img/v2021.3.png]]
+
+
+TEST6
+[[/img/v2021.3.png]]
+
 
 
 
