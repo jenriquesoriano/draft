@@ -80,7 +80,7 @@ TEST3
 
 
 TEST4
-![TEST4] (img/v2021.3.png)
+![TEST4] (draft/img/v2021.3.png)
 
 
 TEST5
@@ -90,6 +90,8 @@ TEST5
 TEST6
 [[/img/v2021.3.png]]
 
+TEST7
+![TEST7] (/draft/img/v2021.3.png)
 
 
 
