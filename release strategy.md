@@ -53,13 +53,13 @@ If a production deployment is needed before the HotFix date, the corresponding b
 Finally, according to the planned date, the validated developments will be taken from the staging branch, creating the branch v2020.1 that will be deployed merge in the master branch and deployed in the production environment. 
 This way, the reference version from this release becomes v2020.1
 
-![v2020.1](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.1_202001291530.png "v2020.1")
+![v2020.1](./img/v2020.1.png "v2020.1")
 
-![v2020.2](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.2_202001291530.png "v2020.2")
+![v2020.2](./img/v2020.2.png "v2020.2")
 
-![v2020.3](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2020.3_202001291530.png "v2020.3")
+![v2020.3](./img/v2020.3.png "v2020.3")
 
-![v2021.0](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/ETF%20INSPIRE%20Validator-Release%20management%20diagrams-2021.0_202001291530.png "v2021.1")
+![v2021.0](./img/v2021.0.png "v2021.1")
 
 
 
