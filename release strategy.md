@@ -102,7 +102,7 @@ TEST7
 ![TEST7] (/jenriquesoriano/draft/release-strategy/img/v2021.3.png)
 
 TEST10
-![TEST10] (https://github.com/jenriquesoriano/draft/blob/release-strategy/img/v2021.3.png "v2020.1")
+![TEST10](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/v2021.3.png "v2020.1")
 
 TEST11
 ![v2020.1](https://github.com/jenriquesoriano/draft/blob/release-strategy/img/v2021.3.png "v2020.1")
