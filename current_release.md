@@ -1,0 +1,75 @@
+The version published at this time contains breaking and non-breaking changes.
+
+#### 🚀 New Features
+* [#765](https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/765) Validation against the latest INSPIRE official schemas - [#748](https://github.com/inspire-eu-validation/ets-repository/pull/748)
+* [#770](https://github.com/INSPIRE-MIF/helpdesk-validator/discussions/770) INSPIRE data sets and data set series metadata for IACS multilanguage- [#749](https://github.com/inspire-eu-validation/ets-repository/pull/749)
+
+#### 🐛 Bugfixes
+
+* [#569](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/569) tn-gml typo correction - [#750](https://github.com/inspire-eu-validation/ets-repository/pull/750)
+* [#618](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/618) [#703](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/703) invalidLegendFormat message updated - [#751](https://github.com/inspire-eu-validation/ets-repository/pull/751)
+* [#710](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/710) am-as-a.2 missingElement and missingAttribute property fixed - [#752](https://github.com/inspire-eu-validation/ets-repository/pull/752)
+* [#714](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/714) su-vector-as.b.1 and su-vector-as.b.2 updated - [#753](https://github.com/inspire-eu-validation/ets-repository/pull/753)
+* [#729](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/729) Conformance class description typo fixed - [#754](https://github.com/inspire-eu-validation/ets-repository/pull/754)
+* [#742](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/742) 5621, 9389 and 9390 EPSG codes added - [#755](https://github.com/inspire-eu-validation/ets-repository/pull/755)
+* [#747](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/747) pf-gml typo fixed - [#756](https://github.com/inspire-eu-validation/ets-repository/pull/756)
+* [#749](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/749) outputSchema and elementSetName default parameters added in UI
+* [#780](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/780) [#718](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/718) [#771](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/771) Not required service metadata checks removed- [#757](https://github.com/inspire-eu-validation/ets-repository/pull/757)
+
+#### 🚀 Validator UI
+* [#24](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/24) New cookie consent on Validator UI - [#25](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/25)
+* [#23](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/23) Quick links in the "Get support" menu need to be changed
+* [#22](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/22) Wrong CC for some US application schemas - [#21](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/21)
+* [#19](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/19) URL Metadata validation for non-ISO default responses - [#20](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/20)
+* [#14](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/14) Staging/production parametrization - [#18](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/18)
+* [#13](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/13) Typo for AD data theme - [#15](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/15)
+* [#10](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/10) Missing CC name for BU3D
+* [#9](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/9) Outdated instructions to be removed
+* [#8](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/8) Date display issue bug  - [#12](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/12)
+* [#7](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/issues/7) Link to be changed  - [#11](https://github.com/inspire-eu-validation/INSPIRE-Validator-UI/pull/11)
+
+#### Deployment instructions
+
+The section containing the deployment process using Docker image and troubleshooting section. You can also find these in the [training material](https://github.com/INSPIRE-MIF/helpdesk-validator/blob/master/training%20material/2020-09-16_Docker_deployment_instructions.md)
+
+```CMD
+docker login docker.pkg.github.com 
+#Provide Github credentials
+docker run --name inspire-validator -d -p 8090:8090 -v ~/etf:/etf docker.pkg.github.com/inspire-mif/helpdesk-validator/inspire-validator:2022.2
+#Launches a container with the image, exposing the UI in port 8090 through the same port in the host machine, and uses a volume in the local file system, on the directory ~/etf
+```
+##### Modifying the Docker image
+
+In the inspire-validator ZIP file, you can find all the resources needed to generate the Docker image from this release. If you would like to tweak anything from it, you can modify any of its contents (Dockerfile, entrypoint file, configuration files... ), then execute the command
+```
+docker build -t [IMAGE_NAME]:[VERSION]
+```
+You can run this again using the run command
+```
+docker run --name inspire-validator -d -p 8090:8090 -v ~/etf:/etf [IMAGE_NAME]:[VERSION]
+```
+##### Deployment on production host
+
+The Docker image is set up to run at localhost to be deployed on any machine. However, users may need to access their validator on a dedicated host, usually with a domain name. For proper functioning of the validator, the UI and correct rendering of Test Reports, the validator needs to be configured to run on a domain.
+
+If you want to run the webapp in another host, you can change the configuration file, inside the .war file inside the inspire-validator zip file accompanying this release, at ```WEB-INF/classes/etf-config.properties```, and modify the `etf.webapp.base.url` property. 
+It is also necessary to configure the Validator UI properties in order to properly point to the ETF. Thus, it is necessary to modify the configuration values in the /validator/js/config.js file inside the ui.zip (to point to the corresponding host domain).
+Then you can proceed to the build process described in the previous point.
+
+##### Exposing the validator through a proxy
+
+Usually, host machines are connected to a private network that accesses the Internet through a proxy. The Docker client needs to be configured to make use of this proxy, in order to be able to build the image and set up running the container.
+
+For the build process, you need to add the following arguments to the command
+```
+--build-arg http_proxy=[HTTP_PROXY_URL:PORT]  --build-arg https_proxy=[HTTPS_PROXY_URL:PORT]  --build-arg no_proxy=127.0.0.1,localhost,*.<my-domain>
+```
+For the run command, you need to add the environment variables to it
+```
+--env http_proxy=[HTTP_PROXY_URL:PORT]  --env https_proxy=[HTTPS_PROXY_URL:PORT]  --env no_proxy=127.0.0.1,localhost,*.<mydomain>
+```
+These can also be set up in the Dockerfile, using the keyword ENV
+
+For more information please check out https://docs.docker.com/network/proxy
+
+For further configuration, please download the file inspire-validator-2022.2.zip and follow the instructions in the README.md file inside the .zip file.
