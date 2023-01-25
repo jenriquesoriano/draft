@@ -3,13 +3,13 @@ The version published at this time contains breaking and non-breaking changes.
 
 #### 🐛 Bugfixes
 
-* [#559](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/559) [#912](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/559) ad, au, cp, hy and tn http redirections fixed - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#661](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/661) application/atom+xml and text/xml added as valid types - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#852](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/852) hy-n-as.b.1 geometry manual check - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#854](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/854) noAccessText error message updated - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#873](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/873) Topic category validation fixed - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#883](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/883) nz-ia.a.2 SpecificExposedElementTypeValue path fix - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
-* [#900](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/900) WFS Direct dependency updated - [#xxx](https://github.com/inspire-eu-validation/ets-repository/pull/xxx)
+* [#559](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/559) [#912](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/559) ad, au, cp, hy and tn http redirections fixed - [#787](https://github.com/inspire-eu-validation/ets-repository/pull/787)
+* [#661](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/661) application/atom+xml and text/xml added as valid types - [#788](https://github.com/inspire-eu-validation/ets-repository/pull/788)
+* [#852](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/852) hy-n-as.b.1 geometry manual check - [#789](https://github.com/inspire-eu-validation/ets-repository/pull/789)
+* [#854](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/854) noAccessText error message updated - [#790](https://github.com/inspire-eu-validation/ets-repository/pull/790)
+* [#873](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/873) Topic category validation fixed - [#791](https://github.com/inspire-eu-validation/ets-repository/pull/791)
+* [#883](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/883) nz-ia.a.2 SpecificExposedElementTypeValue path fix - [#792](https://github.com/inspire-eu-validation/ets-repository/pull/792)
+* [#900](https://github.com/INSPIRE-MIF/helpdesk-validator/issues/900) WFS Direct dependency updated - [#793](https://github.com/inspire-eu-validation/ets-repository/pull/793)
 
 
 
@@ -33,6 +33,10 @@ docker login docker.pkg.github.com
 docker run --name inspire-validator -d -p 8090:8090 -v ~/etf:/etf docker.pkg.github.com/inspire-mif/helpdesk-validator/inspire-validator:2023.0
 #Launches a container with the image, exposing the UI in port 8090 through the same port in the host machine, and uses a volume in the local file system, on the directory ~/etf
 ```
+
+Please note that installation instructions for apt-get include "xxxx" parameter because the certificate of the Debian repository has expired so this parameter is needed to download and install the tools properly.
+
+
 ##### Modifying the Docker image
 
 In the inspire-validator ZIP file, you can find all the resources needed to generate the Docker image from this release. If you would like to tweak anything from it, you can modify any of its contents (Dockerfile, entrypoint file, configuration files... ), then execute the command
@@ -50,6 +54,16 @@ The Docker image is set up to run at localhost to be deployed on any machine. Ho
 If you want to run the webapp in another host, you can change the configuration file, inside the .war file inside the inspire-validator zip file accompanying this release, at ```WEB-INF/classes/etf-config.properties```, and modify the `etf.webapp.base.url` property. 
 It is also necessary to configure the Validator UI properties in order to properly point to the ETF. Thus, it is necessary to modify the configuration values in the /validator/js/config.js file inside the ui.zip (to point to the corresponding host domain).
 Then you can proceed to the build process described in the previous point.
+
+Since 22/12/2023 OGC moved to production [version 5.5.2 (2022-08-26)](https://opengeospatial.github.io/teamengine/relnotes.html) of the [TEAM Engine](http://cite.opengeospatial.org/teamengine/), which introduced credentials for the calls to the services.
+Thus, any deployment which makes use of the OGC TEAM Engine needs to introduce credentials (to be requested [here](https://cite.opengeospatial.org/teamengine/register.jsp)) in order to use them.
+We have incorporated two parameters in the xxxxxx file that need to be filled accordingly to authorize the use of the services:
+
+````
+#TEAM Engine credentials of your organization in order to properly use TEAM Engine remote calls
+user: 
+password: 
+```` 
 
 ##### Exposing the validator through a proxy
 
